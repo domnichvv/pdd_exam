@@ -15,8 +15,8 @@ public class TheoryJDBC {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/pdd_db";
 
-    private static final String USER = "vlad";
-    private static final String PASS = "987654321";
+    private static final String USER = "root";
+    private static final String PASS = "root";
 
     private static Connection conn = null;
     private static Statement stmt = null;
