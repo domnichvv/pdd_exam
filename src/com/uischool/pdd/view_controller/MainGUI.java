@@ -83,6 +83,11 @@ public class MainGUI extends JFrame implements ActionListener{
         }
     }
 
+    /**
+     * Метод показывает на главном экране информацию о вошедшем в систему юзере
+     * @return возвращает строку с информацией
+     */
+
     private String viewUsersInfo(){
         model = new Model();
         String name = model.getUsers().getUserLogin();

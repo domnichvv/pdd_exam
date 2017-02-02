@@ -13,18 +13,37 @@ import java.util.List;
 /**
  * Created by Влад on 12.11.2016.
  */
+
+/**
+ * Класс с колекциями в которых записываються юзеры и вопросы, и с ними выполняется работа
+ */
+
 public class Model implements IModel {
 
     private static Map<Integer, Questions> questions = new HashMap<>();
     private static List<Users> users = new ArrayList<>();
 
+    /**
+     *Метод добавляет юзера в колекцию
+     * @param user объект, который будет добавлен
+     */
+
     public void addUsers(Users user){
         users.add(user);
     }
 
+    /**
+     * Метод получает юзера из коллекции по индексу
+     * @return возвращает объект юзер из коллекции
+     */
+
     public Users getUsers(){
         return users.get(0);
     }
+
+    /**
+     * Удаляет юзера по индексу
+     */
 
     public void removeUsers(){
         users.remove(0);
@@ -36,8 +55,8 @@ public class Model implements IModel {
     }
 
     @Override
-    public void remove(Integer index) {
-        questions.remove(index);
+    public void remove(Integer key) {
+        questions.remove(key);
     }
 
     @Override

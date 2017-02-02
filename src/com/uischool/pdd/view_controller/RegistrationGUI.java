@@ -13,6 +13,11 @@ import java.io.*;
 /**
  * Created by Влад on 09.11.2016.
  */
+
+/**
+ * Класс расширает JFrame и создает форму регистрации нового юзера
+ */
+
 public class RegistrationGUI extends JFrame implements ActionListener{
 
     private Model model;
@@ -119,6 +124,14 @@ public class RegistrationGUI extends JFrame implements ActionListener{
         this.dispose();
         new AuthorizationGUI(model).setVisible(true);
     }
+
+    /**
+     * Метод проверяющий введенные данные в полях на форме регистрации нового пользователя
+     * @param textLogin - введенный логин
+     * @param textPass - введенный пароль
+     * @param textRepeatPass - повтор пароля
+     * @throws IOException исключение, которое может возникнуть
+     */
 
     public void checkTextField(JTextField textLogin, JPasswordField textPass, JPasswordField textRepeatPass) throws IOException {
 

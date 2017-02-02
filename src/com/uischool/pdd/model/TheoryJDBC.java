@@ -23,6 +23,12 @@ public class TheoryJDBC {
     private static PreparedStatement preparedStmt = null;
     private static ResultSet rs = null;
 
+    /**
+     * Метод получает из БД данные для создания сущности Theory(теория)
+     * @param id - идентификатор получаемой сущности
+     * @return возвращает объект Theory
+     */
+
     public static Theory getTheory(int id){
 
         try {

@@ -1,10 +1,13 @@
 package com.uischool.pdd;
 
-import java.awt.*;
-
 /**
  * Created by Влад on 03.11.2016.
  */
+
+/**
+ * Класс с константными переменными
+ */
+
 public class MyConstants {
 
     //размеры текстовых полей для окна авторизации
@@ -74,10 +77,6 @@ public class MyConstants {
     //текст для компонентов админ панели
     public static final String VIEW_TITLE_ADMIN = "Администратор";
 
-    //размеры для компонентов и окна админ панели
-    public static final int ADMIN_SCREEN_WIDTH = 600;
-    public static final int ADMIN_SCREEN_HEIGHT = 800;
-
     //текст для сообщений
     public static final String VIEW_MESSAGE_DIALOG_SUCCESSFUL_AUTH = "Авторизация прошла успешно. Добро пожаловать!";
     public static final String VIEW_MESSAGE_DIALOG_USER_NOT_FOUND = "Пользователь с таким логином и паролем не найден. " +
@@ -104,8 +103,6 @@ public class MyConstants {
     public static final String VIEW_MESSAGE_DIALOG_TITLE_NOT_FINISH_TRAINING = "Внимание! Вы не прошли обучение.";
     public static final String VIEW_MESSAGE_DIALOG_NOT_ANSWER = "Вы не ответили на вопрос!";
 
-
-    public static final String PATH_TO_IMAGE_FINISH_TRAINING = "images/the_end.jpg";
     public static final String PATH_TO_TITLE_IMAGE = "images/znak.png";
     public static final String PATH_TO_IMAGE_IN_MAIN = "images/svetofor.jpg";
     public static final String FILE_NAME = "users.json";

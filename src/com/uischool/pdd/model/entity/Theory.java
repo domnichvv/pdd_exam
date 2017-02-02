@@ -3,6 +3,11 @@ package com.uischool.pdd.model.entity;
 /**
  * Created by Vlad on 12.01.2017.
  */
+
+/**
+ * Класс описание сущности Theory(теория). Содержит две переменные экземпляра: идентификатор и описание
+ */
+
 public class Theory {
 
     private int id = -1;

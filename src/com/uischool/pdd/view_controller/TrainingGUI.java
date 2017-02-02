@@ -15,6 +15,11 @@ import java.awt.event.ActionListener;
 /**
  * Created by Влад on 05.12.2016.
  */
+
+/**
+ * Класс расширает JFrame и создает форму для теоретического материала
+ */
+
 public class TrainingGUI extends JFrame implements ActionListener{
 
     private Model model;
@@ -119,6 +124,10 @@ public class TrainingGUI extends JFrame implements ActionListener{
         }
     }
 
+    /**
+     * Метод выводит резельтат завершения обучения на форму
+     */
+
     private  void completedTheory(){
         labelHead.setText(MyConstants.VIEW_MESSAGE_ABOUT_FINISH_TRAINING);
         labelHead.setFont(new Font("Serif", Font.PLAIN, 24));
@@ -128,6 +137,11 @@ public class TrainingGUI extends JFrame implements ActionListener{
         buttonNext.setText(MyConstants.VIEW_BUTTON_TO_MAIN);
         buttonNext.setFont(new Font("Serif", Font.PLAIN, 20));
     }
+
+    /**
+     * Метод выводит теоретичекий материал на экран
+     * @param counterPage номер страницу которрую нужно вывести
+     */
 
     private void viewTheory(int counterPage){
         Theory theory = TheoryJDBC.getTheory(counterPage);

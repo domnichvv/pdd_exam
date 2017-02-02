@@ -14,6 +14,11 @@
 ///**
 // * Created by Влад on 13.12.2016.
 // */
+//
+///**
+// * Класс для работы с объектов Users с помощью JSON.
+// */
+//
 //public class Validation {
 //
 //    public static void writeToFile(String userLogin, String userPass, String userStatus, int userPercent){

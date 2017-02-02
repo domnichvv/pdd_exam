@@ -25,6 +25,14 @@ public class UsersJDBC {
     private static PreparedStatement preparedStmt = null;
     private static ResultSet rs = null;
 
+    /**
+     * Метод, который заносит нового юзера в БД
+     * @param user_login логин юзера
+     * @param user_pass пароль юзера
+     * @param user_status статус прохождения обучения
+     * @param user_exam_status статус сдачи экзамена
+     */
+
     public static void insertUsers(String user_login, String user_pass, String user_status, String user_exam_status){
         try {
             Class.forName(JDBC_DRIVER);
@@ -72,6 +80,13 @@ public class UsersJDBC {
             }
         }
     }
+
+    /**
+     * Метод сравнивает юзера который входит в систему с существующими юзерами в БД
+     * @param loginText введенный логин юзера
+     * @param passText введенный пароль юзера
+     * @return возвращает true - если есть такой, false - если нет
+     */
 
     public static boolean selectUsers(String loginText, String passText){
 
@@ -134,6 +149,10 @@ public class UsersJDBC {
         }//end try
         return false;
     }
+
+    /**
+     * Метод обновляет данные пользователя
+     */
 
     public static void updateUsers(){
         model = new Model();

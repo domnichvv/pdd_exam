@@ -23,6 +23,12 @@ public class QuestionsJDBC {
     private static PreparedStatement preparedStmt = null;
     private static ResultSet rs = null;
 
+    /**
+     * Метод выбирает из БД вопросы по идентификатору.
+     * @param id - идентификатор вопроса
+     * @return возващает объект Questions
+     */
+
     public static Questions getQuestions(int id){
         try {
 

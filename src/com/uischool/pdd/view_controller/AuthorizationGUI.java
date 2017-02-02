@@ -4,7 +4,6 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import com.uischool.pdd.model.UsersJDBC;
 import com.uischool.pdd.model.impl.Model;
 import com.uischool.pdd.MyConstants;
@@ -12,6 +11,11 @@ import com.uischool.pdd.MyConstants;
 /**
  * Created by Влад on 07.11.2016.
  */
+
+/**
+ * Класс расширает JFrame и создает форму для авторизации пользователя
+ */
+
 public class AuthorizationGUI extends JFrame implements ActionListener {
 
     private Model model;
@@ -104,6 +108,12 @@ public class AuthorizationGUI extends JFrame implements ActionListener {
         }
     }
 
+    /**
+     * Метод обрабатывает данные введеные пользователем на форме авторизации
+     * @param textLogin - введенные данные в поле логина
+     * @param textPassword - введенные данные в поле пароля
+     */
+
     public void checkUser(JTextField textLogin, JPasswordField textPassword) {
 
         String loginText = new String(textLogin.getText());
@@ -111,12 +121,7 @@ public class AuthorizationGUI extends JFrame implements ActionListener {
 
         if (loginText.equals("") || passText.equals("")) {
             JOptionPane.showMessageDialog(panelMessageDialog, MyConstants.VIEW_MESSAGE_DIALOG_EMPTY_FIELD);
-        }
-        else if (loginText.equals(MyConstants.ADMIN_LOGIN) && passText.equals(MyConstants.ADMIN_PASS)) {
-            JOptionPane.showMessageDialog(panelMessageDialog, MyConstants.VIEW_MESSAGE_DIALOG_ADMIN);
-            AdminPanelGUI();
-        }
-        else {
+        } else {
             if (UsersJDBC.selectUsers(loginText, passText) == true) {
                 JOptionPane.showMessageDialog(panelMessageDialog, MyConstants.VIEW_MESSAGE_DIALOG_SUCCESSFUL_AUTH);
                 mainGUI();
@@ -190,11 +195,5 @@ public class AuthorizationGUI extends JFrame implements ActionListener {
         this.setVisible(false);
         this.dispose();
         new MainGUI(model).setVisible(true);
-    }
-
-    public void AdminPanelGUI() {
-        this.setVisible(false);
-        this.dispose();
-        new AdminPanelGUI(model).setVisible(true);
     }
 }

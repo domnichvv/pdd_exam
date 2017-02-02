@@ -3,7 +3,6 @@ package com.uischool.pdd;
 import com.jtattoo.plaf.mcwin.McWinLookAndFeel;
 import com.uischool.pdd.model.impl.Model;
 import com.uischool.pdd.view_controller.AuthorizationGUI;
-
 import javax.swing.*;
 import java.io.IOException;
 

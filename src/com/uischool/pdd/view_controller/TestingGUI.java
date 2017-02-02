@@ -15,6 +15,11 @@ import java.awt.event.ActionListener;
 /**
  * Created by Влад on 05.12.2016.
  */
+
+/**
+ * Класс расширает JFrame и создает форму для тестирования
+ */
+
 public class TestingGUI extends JFrame implements ActionListener{
 
     private Model model;
@@ -188,7 +193,10 @@ public class TestingGUI extends JFrame implements ActionListener{
         }
     }
 
-    //This method shows the questions and answers
+    /**
+     * Метод выводит не форму вопросы и ответы
+     */
+
     private void nextPrevPages(){
         Questions quest = QuestionsJDBC.getQuestions(countQuestions);
         labelCountQuestion.setText(countQuestions());
@@ -198,7 +206,10 @@ public class TestingGUI extends JFrame implements ActionListener{
         checkBoxThree.setText("<html>" + quest.getAnswer3() + "</html>");
     }
 
-    //in this method checked answers
+    /**
+     * Метод сверяеет выбраный ответ с правильным
+     */
+
     private void checkAnswer(){
         String right_answer = QuestionsJDBC.getQuestions(countQuestions).getRight_answer();
         answer = "answer";
@@ -242,6 +253,12 @@ public class TestingGUI extends JFrame implements ActionListener{
     }
 
     //show result testing
+
+    /**
+     * Метод по завершении тестирования выводит на форму результаты.
+     * Если правильных ответов 15 и больше - тестирование сдано, иначе - нет
+     */
+
     private void finishTesting(){
         if (counterRightAnswer < 15){
             labelHeader.setText("<html>" + MyConstants.VIEW_MESSAGE_ABOUT_NOT_FINISH_TESTING + "</html>");
